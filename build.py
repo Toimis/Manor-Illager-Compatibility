@@ -21,6 +21,7 @@ with tempfile.TemporaryDirectory() as tmp:
             raise RuntimeError(f'{annotation} missing from {attribute}; check compile-api retention')
     output.parent.mkdir(exist_ok=True)
     with zipfile.ZipFile(output,'w',zipfile.ZIP_DEFLATED) as jar:
+        jar.write(root / 'LICENSE', 'LICENSE')
         for folder, files in [(root / 'resources',(root / 'resources').rglob('*')), (Path(tmp),(Path(tmp) / 'manor').rglob('*.class'))]:
             for file in sorted(files):
                 if file.is_file() and file.name != ".DS_Store":

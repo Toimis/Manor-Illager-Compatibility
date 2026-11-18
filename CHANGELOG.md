@@ -4,6 +4,7 @@
 
 - Guaranteed Necromancer spawn in basement.
 - Added reset option in Mod Menu.
+- Added LICENSE.
 
 ## 1.1.2
 
