@@ -1,0 +1,1 @@
+package net.minecraft; public abstract class class_437 { protected int field_22789,field_22790; protected class_310 field_22787; protected class_437(class_2561 t){} protected void method_25426(){} public void method_25419(){} protected <T extends class_364>T method_37063(T t){return t;} }

@@ -1,0 +1,2 @@
+package com.google.gson;
+public class JsonObject extends JsonElement { public JsonArray getAsJsonArray(String key){return null;} public JsonObject getAsJsonObject(String key){return null;} public JsonElement get(String key){return null;} public void addProperty(String key,Number value){} public void addProperty(String key,String value){} public void add(String key,JsonElement value){} public JsonObject deepCopy(){return null;} }

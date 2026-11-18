@@ -1,0 +1,1 @@
+package org.spongepowered.asm.mixin.injection; @java.lang.annotation.Retention(java.lang.annotation.RetentionPolicy.RUNTIME) public @interface ModifyVariable { String[] method(); At at(); boolean argsOnly(); int ordinal(); boolean remap(); }

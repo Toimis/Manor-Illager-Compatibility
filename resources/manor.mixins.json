@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "manor.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ResourcePacksMixin",
+    "TemplateMixin",
+    "ManorPiecesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,1 @@
+package net.fabricmc.loader.api; public interface FabricLoader {static FabricLoader getInstance(){return null;} java.nio.file.Path getConfigDir(); java.util.Optional<ModContainer> getModContainer(String id);}

@@ -1,0 +1,1 @@
+package net.minecraft; public class class_310 {public void method_1507(class_437 s){} }

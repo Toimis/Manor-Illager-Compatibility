@@ -1,0 +1,6 @@
+accessWidener v2 intermediary
+accessible field net/minecraft/class_3790 field_16693 Lnet/minecraft/class_3784;
+mutable field net/minecraft/class_3790 field_16693 Lnet/minecraft/class_3784;
+accessible field net/minecraft/class_3782 field_16676 Ljava/util/List;
+accessible field net/minecraft/class_3781 field_24015 Lcom/mojang/datafixers/util/Either;
+accessible field net/minecraft/class_3781 field_16674 Lnet/minecraft/class_6880;
