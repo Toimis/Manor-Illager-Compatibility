@@ -28,9 +28,14 @@ public final class ManorRooms {
     private static void assignRooms(List<class_3443> pieces, class_3790 entrance, class_3782 original) {
         List<class_3790> melee = new ArrayList<>();
         List<class_3790> caster = new ArrayList<>();
+        class_3790 mainHall = null;
         for (class_3443 piece : pieces) {
             if (!(piece instanceof class_3790 room)) continue;
             switch (location(room.method_16644())) {
+                case "minecraft:illager_mansion/manor_fixed/mansion_main_hall1",
+                     "minecraft:illager_mansion/manor_fixed/mansion_main_hall2",
+                     "minecraft:illager_mansion/manor_fixed/mansion_main_hall3",
+                     "minecraft:illager_mansion/manor_fixed/mansion_main_hall4" -> mainHall = room;
                 case "manor_compat:basher", "manor_compat:basher2",
                      "minecraft:illager_mansion/vindicator", "minecraft:illager_mansion/vindicator2" -> melee.add(room);
                 case "manor_compat:provoker", "manor_compat:provoker2", "manor_compat:archivist", "manor_compat:archivist2",
@@ -50,6 +55,13 @@ public final class ManorRooms {
         }
         Collections.shuffle(enabled);
         for (String mob : enabled) {
+            if (mob.equals("necromancer") && mainHall != null) {
+                var hall = mainHall.method_16644();
+                var projection = hall.method_16624();
+                var landing = class_3784.method_30434("manor_compat:necromancer_landing").apply(projection);
+                mainHall.field_16693 = new class_3782(List.of(hall, landing), projection);
+                continue;
+            }
             List<class_3790> slots = Settings.isMelee(mob) ? melee : caster;
             if (slots.isEmpty()) {
                 children.add(class_3784.method_30434("manor_compat:entrance/" + mob).apply(original.method_16624()));

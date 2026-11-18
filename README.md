@@ -1,4 +1,6 @@
-# Manor Illager Compatibility 1.1.2
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-blue.svg)](LICENSE)
+
+# Manor Illager Compatibility 1.1.3
 
 Serverside mod for Fabric for Minecraft 1.21.1
 
@@ -17,7 +19,7 @@ Adds [Illager Invasion](https://modrinth.com/mod/illager-invasion) [21.1.6] mobs
 
 Each melee slot first rolls the Vindicator percentage. Each caster slot first rolls the Evoker percentage. When that roll fails, the slot chooses one mob from its group in proportion to its weight. If the vanilla roll fails and all weights are zero, the slot stays empty.
 
-Each configurable mob has a `.guaranteed` toggle. Each newly generated manor assigns enabled mobs to distinct, randomly chosen encounter slots. If the manor has too few suitable slots, the remaining guaranteed mobs spawn alongside the Invoker at the same entrance. This works even with zero chance or weight.
+Each configurable mob has a `.guaranteed` toggle. The Necromancer guarantee defaults to on and places it at the foot of the basement stairs. If a modified layout omits the hall, it uses the regular caster guarantee. Each newly generated manor assigns other guaranteed mobs to distinct, randomly chosen encounter slots. If the manor has too few suitable slots, the remaining guaranteed mobs spawn alongside the Invoker at the same entrance. This works even with zero chance or weight.
 
 # Build
 
@@ -31,4 +33,4 @@ At server data load, the mod generates its encounter pools and room templates lo
 
 # DISCLAIMER
 
-Code was entirely generated using AI.
+Code was generated using AI.

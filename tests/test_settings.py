@@ -22,6 +22,11 @@ public class SettingsTest {
             check(Settings.chance("basher") == 3 && Settings.guaranteed("basher"));
             return;
         }
+        check(Settings.guaranteed("necromancer"));
+        Settings.toggle("necromancer");
+        Settings.setChance("vindicator", 7);
+        Settings.reset();
+        check(Settings.guaranteed("necromancer"));
         check(Settings.chance("vindicator") == 50);
         check(Settings.chance("basher") == 100 && !Settings.guaranteed("basher"));
         Settings.setChance("vindicator", 100);
@@ -45,7 +50,7 @@ public class SettingsTest {
 }''')
     subprocess.run(['javac', '--release', '21', '-d', str(tmp), str(loader),
                     str(root / 'src/manor/Settings.java'), str(test)], check=True)
-    for version in [None, '', '1', '3', 'invalid']:
+    for version in [None, '', '1', '4', 'invalid']:
         config = tmp / ('config-' + str(version))
         config.mkdir()
         file = config / 'manor-illagers.properties'
@@ -55,6 +60,6 @@ public class SettingsTest {
         subprocess.run(command + ['defaults'], check=True)
         subprocess.run(command + ['reload'], check=True)
         contents = file.read_text()
-        assert '# DO NOT TOUCH\nconfigVersion=2' in contents
+        assert '# DO NOT TOUCH\nconfigVersion=3' in contents
         assert contents.index('# Melee mobs') < contents.index('basher=') < contents.index('# Caster mobs')
 print('Settings tests passed.')

@@ -1,23 +1,28 @@
 # Changelog
 
+## 1.1.3 — 2026-11-18
+
+- Guaranteed Necromancer spawn in basement.
+- Added reset option in Mod Menu.
+
 ## 1.1.2
 
-- Roll the vanilla chance before choosing a weighted encounter.
-- Add optional guaranteed spawns.
+- Changed roll logic.
 - Reset configuration defaults on a schema mismatch.
+- Validated project redistribution safety.
 
-## 1.1.1 — 2026-11-18
+## 1.1.1
 
-- Fix the [1.1.0] startup crash.
-- Compile explicitly for Java 21 and derive the output JAR version from mod metadata.
-- Replace encounter toggles with per-mob percentage sliders.
-- Remove Surrendered from encounter options.
-- Track the config schema version.
+- Fixed [1.1.0] startup crash.
+- Replaced configuration toggles with sliders.
+- Remove Surrendered from spawning.
+- Tracked config schema version.
 
-## 1.1.0 - 2026-11-18
+## 1.1.0
 
-- Configurable mansion encounters with per-mob toggles, a Mod Menu screen, and settings saved to `config/manor-illagers.properties`.
-- Enabled mobs share their melee or caster spawn slots with equal weight; empty groups fall back to vanilla templates.
+- Added configurable mansion encounters.
+- Integrates Mod Menu.
+- Saved settings to `config/manor-illagers.properties`.
 
 ## 1.0.0 - 2026-11-18
 
